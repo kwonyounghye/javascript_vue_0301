@@ -1,0 +1,31 @@
+<body style="text-align:center;">
+
+	<h1 style="color:green;">
+		GeeksForGeeks
+	</h1>
+	<h3>JavaScript apply() method</h3>
+
+	<button onClick="fun()">
+		click
+	</button>
+
+	<p id="GFG"></p>
+
+
+	<script>
+		function fun() {
+			let p = {
+			fullName: function(addr1, addr2) {
+				return this.fName + " " + this.lName
+						+ ", " + addr1 + ", " + addr2;
+			}
+		}
+		let p1 = {
+			fName:"GFGfName",
+			lName: "GFGlName",
+		}
+			let x = p.fullName.apply(p1, ["India", "USA"]);
+			document.getElementById("GFG").innerHTML = x;
+		}
+	</script>
+</body>

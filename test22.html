@@ -1,0 +1,27 @@
+<script>
+	// Child function
+	function Foo() {
+	
+		// This will print parent function's name
+		console.log(Foo.caller.name);
+	}
+	
+	// Parent function
+	function Geeks() {
+		Foo();
+	}
+	
+	// Parent function
+	function Fun() {
+		Foo();
+	}
+	
+	// Parent function
+	function Sam() {
+		Foo();
+	}
+	
+	Geeks();
+	Fun();
+	Sam();
+</script>

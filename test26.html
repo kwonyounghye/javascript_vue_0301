@@ -1,0 +1,34 @@
+<body style="text-align:center;">
+	<h1 style="color:green;">
+		GeeksForGeeks
+	</h1>
+	<h3>call() method</h3>
+
+	<button onClick="fun()">
+		click
+	</button>
+
+	<p id="GFG"></p>
+
+
+	<!-- Script to use call() method to call
+			function -->
+	<script>
+		function fun() {
+		let p = {
+			fullName: function(addr1, addr2) {
+			return this.fName + " " + this.lName
+					+ ", " + addr1 + ", " + addr2;
+			}
+		}
+			
+		let p1 = {
+			fName:"GFGfName",
+			lName: "GFGlName",
+		}
+			
+		let x = p.fullName.call(p1, "India", "USA");
+		document.getElementById("GFG").innerHTML = x;
+		}
+	</script>
+</body>

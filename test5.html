@@ -1,0 +1,33 @@
+<script>
+	// Predicate function check odd
+	function isOdd(number) {
+	return number % 2 == 1;
+	}
+	
+	// Predicate function check Even
+	function isEven(number) {
+	return number % 2 == 0;
+	}
+	
+	// function that negate all function
+	function negate(pre) {
+	return function (number) {
+		return !pre(number);
+	};
+	}
+	// Wrapping predicate function to negate function
+	var isNotOdd = negate(isOdd);
+	var isNotEven = negate(isEven);
+	
+	// Outputs: true
+	console.log(isOdd(5));
+	
+	// Outputs: true
+	console.log(isNotOdd(10));
+	
+	// Output: false
+	console.log(isEven(3));
+	
+	// Output: false
+	console.log(isNotEven(4));
+</script>

@@ -1,0 +1,66 @@
+<script>
+	// 1st function
+	function hello() {
+	var s = "";
+	var ans = ["The", " hello function ", "takes "];
+	for (var i = 0; i < 3; i++) s += ans[i];
+	console.log(s);
+	}
+	
+	// 2nd function
+	function hello1() {
+	var s = "";
+	var ans = ["The hello1 function", " takes "];
+	for (var i = 0; i < 2; i++) s += ans[i];
+	console.log(s);
+	}
+	
+	// 3rd function
+	function hello2() {
+	var ans = "The hello2 function takes ";
+	for (var i = 0; i < 1; i++) console.log(ans);
+	}
+	
+	// Function to check time required by each function
+	function findTime(f) {
+	
+	// Storing initial time in start
+	var start = performance.now();
+	
+	// Calling the function
+	f();
+	
+	// Storing time after running the function
+	var end = performance.now();
+	
+	// Return time taken by function
+	return end - start;
+	}
+	
+	function findMinTime() {
+	
+	// Initializing array of functions
+	var fun = [hello, hello1, hello2];
+	
+	// Initialising array of time taken by function
+	var ans = [];
+	
+	// Iterating over all the functions and
+	// storing time taken by them
+	for (var i = 0; i < 3; i++) {
+		var n = findTime(fun[i]);
+		ans[i] = n;
+		console.log(ans[i]);
+	}
+	
+	// Finding the minimum time in array
+	var answer = Math.min.apply(null, ans);
+	c = ans.indexOf(answer);
+	
+	// Return index of fastest array
+	return c;
+	}
+	
+	var minTime = findMinTime();
+	console.log("Index of fastest function:", minTime);
+</script>

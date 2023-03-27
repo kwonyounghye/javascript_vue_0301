@@ -1,0 +1,23 @@
+<body style="text-align:center;">
+	<h1 style="color:green;">
+		GeeksForGeeks
+	</h1>
+
+	<h2>without PreventDefault() and return false</h2>
+	<div onclick='GeekParent()'>
+		<a href='#' onclick='GeekChild()'>
+			Click here
+		</a>
+	</div>
+	<br>
+	<br>
+	<script>
+		function GeekChild() {
+			alert('Link Clicked');
+		}
+		
+		function GeekParent() {
+			alert('div Clicked');
+		}
+	</script>
+</body>

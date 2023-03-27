@@ -1,0 +1,27 @@
+<script>
+	// Declaring a generator function
+	function* generator(i) {
+	yield i;
+	yield i + 50;
+	yield i + 100;
+	}
+	
+	// Initialize the generator
+	const generate = generator(50);
+	
+	// Console out the object returned
+	// by the next() method
+	let nextValObj = generate.next();
+	
+	// Console out the value of the object
+	console.log(nextValObj.value);
+	
+	// Console out next iterations
+	// of the generator
+	console.log(generate.next().value);
+	console.log(generate.next().value);
+	
+	// This value would be undefined as
+	// the last defined one is i + 100
+	console.log(generate.next().value);
+</script>

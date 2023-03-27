@@ -1,0 +1,25 @@
+<body style="text-align:center;">
+	<h1 style="color:green;">
+		GeeksForGeeks
+	</h1>
+	<h2> PreventDefault( ) </h2>
+	<div onclick='GeekParent()'>
+		<a href='https://ide.geeksforgeeks.org'
+		onclick='GeekChild()'>
+			Click here to visit GeeksforGeeks.com
+		</a>
+	</div>
+	<br>
+	<br>
+	<script>
+		function GeekChild() {
+			event.preventDefault();
+			event.currentTarget.innerHTML = 'Click event prevented'
+			alert('Link Clicked');
+		}
+		
+		function GeekParent() {
+			alert('div Clicked');
+		}
+	</script>
+</body>

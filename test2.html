@@ -1,0 +1,29 @@
+<script>
+	// call back function that return factorial
+	function factor(number) {
+	let j = 1;
+	// loop that generate factorial of number
+	for (let i = 1; i <= number; i++) {
+		j *= i;
+	}
+	// printing value of factorial
+	console.log(`factorial of ${number} is `);
+	console.log(j);
+	}
+	
+	// function that iterate over callback function
+	function test(n, callback) {
+	if (n <= 0) {
+		console.log("invalid number");
+		return;
+	}
+	let k = n;
+	// iterating over callback function with for loop
+	for (let i = k; i >= 1; i--) callback(i);
+	}
+	
+	// initialising test variable
+	let t_umber = 5;
+	// main function calling
+	test(t_umber, factor);
+</script>

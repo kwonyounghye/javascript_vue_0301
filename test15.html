@@ -1,0 +1,14 @@
+<script>
+	function callAfter(delay, myFunct,
+		...params) {
+		setTimeout(() => {
+			myFunct(...params);
+		}, delay);
+	}
+	
+	function add(a, b) {
+		alert("The sum is : " + (a + b));
+	}
+	
+	callAfter(2000, add, 4, 7);
+</script>

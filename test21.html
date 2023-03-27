@@ -1,0 +1,15 @@
+<script>
+	// Child function
+	function Foo() {
+	
+	// This will print 'Bar'
+		console.log(Foo.caller.name);
+	}
+	
+	// Parent function
+	function Bar() {
+	Foo();
+	}
+	
+	Bar();
+</script>
